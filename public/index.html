@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART_MOSPHERE | Interior & Event Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="script.js" defer></script>
+    <meta name="description" content="Transforming spaces and events with our premium interior design and event planning services. Explore our portfolio, services, and client testimonials.">
+    <meta name="keywords" content="Interior Design, Event Planning, Corporate Events, Social Events, Home Decor, Modern Design, Residential Design, Commercial Design">
+    <meta name="author" content="Elegance Design Studio">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="logo">
+            <a href="#home">
+                <h1>ART<span>MOSPHERIC</span></h1>
+            </a>
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#interior-design">Interior Design</a></li>
+                        <li><a href="#event-design">Event Design</a></li>
+                        <li><a href="#consultations">Consultations</a></li>
+                    </ul>
+                </li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact" class="btn-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1 class="animated-heading">Transforming Spaces & Events</h1>
+            <p class="subtitle">Crafting exceptional interiors and unforgettable experiences</p>
+            <div class="hero-cta">
+                <a href="#interior-design" class="btn btn-primary">Interior Design</a>
+                <a href="#event-design" class="btn btn-secondary">Event Design</a>
+            </div>
+        </div>
+        <div id="rotating-showcase" class="rotating-showcase"></div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Offer</span>
+                <h2 class="section-title">Our Services</h2>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="service-tabs">
+                <div class="tab-headers">
+                    <button class="tab-btn active" data-tab="interior-design">
+                        <i class="fas fa-home"></i> Interior Design
+                    </button>
+                    <button class="tab-btn" data-tab="event-design">
+                        <i class="fas fa-glass-cheers"></i> Event Design
+                    </button>
+                    <button class="tab-btn" data-tab="consultations">
+                        <i class="fas fa-comments"></i> Consultations
+                    </button>
+                </div>
+                
+                <div class="tab-content">
+                    <div id="interior-design" class="tab-pane active">
+                        <div class="service-grid">
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-couch"></i></div>
+                                <h3>Residential Design</h3>
+                                <p>Transform your living spaces into personalized sanctuaries that reflect your unique style and meet your lifestyle needs.</p>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-building"></i></div>
+                                <h3>Commercial Design</h3>
+                                <p>Create inspiring work environments that enhance productivity, impress clients, and embody your brand identity.</p>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-pencil-ruler"></i></div>
+                                <h3>Space Planning</h3>
+                                <p>Optimize layouts for efficiency and flow, ensuring your space is both functional and aesthetically pleasing.</p>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-palette"></i></div>
+                                <h3>Color Consultation</h3>
+                                <p>Select harmonious color schemes that set the right mood and complement your existing elements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="event-design" class="tab-pane">
+                        <div class="service-grid">
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                                <h3>Corporate Events</h3>
+                                <p>Create impressive corporate gatherings from conferences and galas to product launches and team-building retreats.</p>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-heart"></i></div>
+                                <h3>Social Celebrations</h3>
+                                <p>Design memorable weddings, anniversaries, birthdays, and other special milestones tailored to your vision.</p>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+                                <h3>Venue Transformation</h3>
+                                <p>Transform ordinary venues into extraordinary spaces that create the perfect ambiance for your event.</p>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-tasks"></i></div>
+                                <h3>Full Event Management</h3>
+                                <p>Comprehensive planning and execution services ensuring every detail is perfectly managed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="consultations" class="tab-pane">
+                        <div class="service-grid">
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-home"></i></div>
+                                <h3>Design Discovery</h3>
+                                <p>Initial consultation to understand your style preferences, needs, and budget for your space or event.</p>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                                <h3>Style Assessment</h3>
+                                <p>Professional analysis of your aesthetic preferences to guide design recommendations.</p>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-ruler-combined"></i></div>
+                                <h3>Space Evaluation</h3>
+                                <p>On-site assessment to analyze spatial opportunities and constraints for optimal design solutions.</p>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
+                                <h3>Project Planning</h3>
+                                <p>Detailed roadmap development for your interior design or event planning project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="showcase-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Expertise</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="showcase-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="corporate-events">Corporate Events</button>
+                <button class="filter-btn" data-filter="social-events">Social Events</button>
+            </div>
+            
+            <div class="showcase-grid">
+                <div class="showcase-item residential">
+                    <div class="showcase-image">
+                        <img src="images/AHIF NEW 1.jpg" alt="Modern Living Room">
+                        <div class="showcase-overlay">
+                            <div class="showcase-info">
+                                <h3>Luxury Penthouse</h3>
+                                <p>Residential Design</p>
+                                <a href="#" class="btn-view-project">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-item commercial">
+                    <div class="showcase-image">
+                        <img src="images/APPROVED MTN_1 - Photo.jpg" alt="Modern Office">
+                        <div class="showcase-overlay">
+                            <div class="showcase-info">
+                                <h3>Creative Studio</h3>
+                                <p>Commercial Design</p>
+                                <a href="#" class="btn-view-project">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-item corporate-events">
+                    <div class="showcase-image">
+                        <img src="images/AVIADEV BLUE 1.jpg" alt="Corporate Event">
+                        <div class="showcase-overlay">
+                            <div class="showcase-info">
+                                <h3>Annual Gala</h3>
+                                <p>Corporate Event</p>
+                                <a href="#" class="btn-view-project">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-item social-events">
+                    <div class="showcase-image">
+                        <img src="images/AVIADEV BLUE 1.jpg" alt="Wedding Setup">
+                        <div class="showcase-overlay">
+                            <div class="showcase-info">
+                                <h3>Garden Wedding</h3>
+                                <p>Social Event</p>
+                                <a href="#" class="btn-view-project">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-item residential">
+                    <div class="showcase-image">
+                        <img src="images/AHIF NEW 1.jpg" alt="Kitchen Design">
+                        <div class="showcase-overlay">
+                            <div class="showcase-info">
+                                <h3>Modern Kitchen</h3>
+                                <p>Residential Design</p>
+                                <a href="#" class="btn-view-project">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-item corporate-events">
+                    <div class="showcase-image">
+                        <img src="images/AVIADEV BLUE 1.jpg" alt="Product Launch">
+                        <div class="showcase-overlay">
+                            <div class="showcase-info">
+                                <h3>Product Launch</h3>
+                                <p>Corporate Event</p>
+                                <a href="#" class="btn-view-project">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="showcase-cta">
+                <a href="#portfolio" class="btn btn-primary">View Full Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="before-after" class="before-after-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Stunning Transformations</span>
+                <h2 class="section-title">Before & After</h2>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="before-after-slider">
+                <div class="slider-item">
+                    <div class="comparison-slider">
+                        <img src="images/AVIADEV BLUE 1.jpg" alt="Before Image 1" class="before-image">
+                        <div class="slider-resizer">
+                            <img src="images/AHIF NEW 1.jpg" alt="After Image 1" class="after-image">
+                        </div>
+                        <div class="slider-handle">
+                            <i class="fas fa-arrows-alt-h"></i>
+                        </div>
+                    </div>
+                    <div class="comparison-caption">
+                        <div class="caption-before">Before</div>
+                        <div class="caption-after">After</div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Client Experiences</span>
+                <h2 class="section-title">Testimonials</h2>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="testimonials-wrapper">
+                <div class="testimonials-tabs">
+                    <button class="tab-btn active" data-tab="written">Written</button>
+                    <button class="tab-btn" data-tab="video">Video</button>
+                    <button class="tab-btn" data-tab="audio">Audio</button>
+                </div>
+                
+                <div class="testimonials-content">
+                    <div id="written" class="tab-pane active">
+                        <div class="testimonial-carousel">
+                            <div class="testimonial-item active">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-image">
+                                        <img src="images/testimonial-1.jpg" alt="Sarah Johnson">
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>"The team at Elegance Studio transformed my home beyond my wildest expectations! They perfectly captured my style while introducing elements I never would have thought of. The process was smooth from start to finish."</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h4>Sarah Johnson</h4>
+                                        <p>Residential Client</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-image">
+                                        <img src="images/testimonial-2.jpg" alt="Mark Thompson">
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>"Working with Elegance Studio on our annual corporate gala was the best decision we made. The event design was spectacular and created exactly the impression we wanted to make with our clients and partners."</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h4>Mark Thompson</h4>
+                                        <p>Corporate Event Client</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-image">
+                                        <img src="images/testimonial-3.jpg" alt="Lisa Wong">
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>"I love my new office space! The team understood exactly what our company needed - a space that inspires creativity while maintaining professionalism. Highly recommend their commercial design services."</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h4>Lisa Wong</h4>
+                                        <p>Commercial Client</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                            <div class="carousel-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div id="video" class="tab-pane">
+                        <div class="video-testimonials">
+                            <div class="video-testimonial">
+                                <div class="video-container">
+                                    <video controls poster="images/video-thumb-1.jpg">
+                                        <source src="videos/testimonial-1.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="video-caption">
+                                    <h4>The Robertson Family</h4>
+                                    <p>Home Renovation Project</p>
+                                </div>
+                            </div>
+                            <div class="video-testimonial">
+                                <div class="video-container">
+                                    <video controls poster="images/video-thumb-2.jpg">
+                                        <source src="videos/testimonial-2.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="video-caption">
+                                    <h4>Nexus Technologies</h4>
+                                    <p>Office Design & Annual Conference</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="audio" class="tab-pane">
+                        <div class="audio-testimonials">
+                            <div class="audio-testimonial">
+                                <div class="audio-container">
+                                    <audio controls>
+                                        <source src="audio/testimonial-1.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                                <div class="audio-caption">
+                                    <h4>Jennifer Adams</h4>
+                                    <p>Wedding Design Client</p>
+                                </div>
+                            </div>
+                            <div class="audio-testimonial">
+                                <div class="audio-container">
+                                    <audio controls>
+                                        <source src="audio/testimonial-2.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                                <div class="audio-caption">
+                                    <h4>Michael Reeves</h4>
+                                    <p>Restaurant Redesign</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Work</span>
+                <h2 class="section-title">Complete Portfolio</h2>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="portfolio-categories">
+                <button class="category-btn active" data-category="all">All Projects</button>
+                <button class="category-btn" data-category="interiors">Interiors</button>
+                <button class="category-btn" data-category="events">Events</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio items will be loaded dynamically via JavaScript -->
+            </div>
+            
+            <div class="portfolio-pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Insights</span>
+                <h2 class="section-title">Blog & Resources</h2>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-1.jpg" alt="Interior Design Trends">
+                        <div class="blog-category">Interior Design</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3><a href="#">Latest Trends in Interior Design for 2025</a></h3>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> April 10, 2025</span>
+                            <span><i class="far fa-comment"></i> 24 Comments</span>
+                        </div>
+                        <p>Discover the latest trends that are shaping the world of interior design this year, from sustainable materials to statement pieces.</p>
+                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-2.jpg" alt="Event Planning Tips">
+                        <div class="blog-category">Event Planning</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3><a href="#">How to Create Unforgettable Corporate Events</a></h3>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> April 5, 2025</span>
+                            <span><i class="far fa-comment"></i> 18 Comments</span>
+                        </div>
+                        <p>Learn the essential elements that transform ordinary corporate gatherings into memorable experiences that leave lasting impressions.</p>
+                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-3.jpg" alt="Color Selection">
+                        <div class="blog-category">Design Tips</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3><a href="#">The Psychology of Color in Spaces and Events</a></h3>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> March 28, 2025</span>
+                            <span><i class="far fa-comment"></i> 32 Comments</span>
+                        </div>
+                        <p>Understanding how different colors affect mood and perception can help create more effective spaces and impactful events.</p>
+                        <a href="#" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-cta">
+                <a href="#" class="btn btn-secondary">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header text-left">
+                        <span class="section-subtitle">Who We Are</span>
+                        <h2 class="section-title">About Our Studio</h2>
+                        <div class="separator align-left"></div>
+                    </div>
+                    
+                    <p class="about-intro">ART_MOSPHERIC is a premier interior design and event planning company with over 15 years of experience transforming spaces and creating memorable events.</p>
+                    
+                    <p>Our team of skilled designers and event planners bring creativity, expertise, and attention to detail to every project. We believe in a collaborative approach, working closely with our clients to understand their vision and bring it to life.</p>
+                    
+                    <p>Whether we're designing a home that perfectly reflects your personality or creating a corporate event that leaves a lasting impression, our commitment to excellence remains unwavering.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">300+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#team" class="btn btn-primary">Meet Our Team</a>
+                </div>
+                <div class="about-image">
+                    <div class="image-collage">
+                        <img src="images/about-1.jpg" alt="Design Studio" class="main-image">
+                        <img src="images/about-2.jpg" alt="Our Team" class="secondary-image">
+                        <div class="experience-badge">
+                            <span>15+</span>
+                            <p>Years of Excellence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta-section" style="background-image: url('images/cta-bg.jpg');">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Space or Event?</h2>
+                <p>Contact us today for a consultation and discover how we can bring your vision to life.</p>
+                <a href="#contact" class="btn btn-light">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Our Location</h4>
+                            <p>Checkmate Plaza<br>Westlands, Kenya</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Call Us</h4>
+                            <p>+254746998526<br>Mon-Fri, 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email Us</h4>
+                            <p>info@artmospheric.com<br>hello@artmospheric.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343077!2d-74.0059418!3d40.7127837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40zMDA3JzQ2LjAiTiA3NMKwMDAnMjEuNCJX!5e0!3m2!1sen!2sus!4v1555555555555!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm" action="contact-process.php" method="post">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service of Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select a Service</option>
+                                <option value="residential">Residential Interior Design</option>
+                                <option value="commercial">Commercial Interior Design</option>
+                                <option value="corporate-events">Corporate Event Design</option>
+                                <option value="social-events">Social Event Design</option>
+                                <option value="consultation">Design Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for design tips and inspiration</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">The People Behind Our Success</span>
+                <h2 class="section-title">Our Creative Team</h2>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team-1.jpg" alt="Purity Ng'endo">
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Purity Ng'endo</h3>
+                        <p class="member-role">Founder & Creative Director</p>
+                        <p class="member-bio">With over 2 years of experience, Purity brings vision and innovation to every project.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/team-2.jpg" alt="Ian Peter Njonjo">
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Ian Peter Njonjo</h3>
+                        <p class="member-role">Lead Interior Designer</p>
+                        <p class="member-bio">Ian Peter specializes in contemporary design with a focus on sustainable materials.</p>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Common Questions</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="separator"></div>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is your design process?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our design process begins with an initial consultation to understand your needs and vision. We then develop concept designs, refine based on your feedback, create detailed plans, and oversee implementation. Throughout the process, we maintain clear communication and ensure your complete satisfaction.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much does interior design service cost?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our pricing varies based on project scope, size, and complexity. We offer several service packages ranging from one-time consultations to full-service design. During our initial meeting, we'll discuss your budget and recommend the most appropriate service level for your needs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How far in advance should I book event design services?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For corporate events and large social gatherings, we recommend booking 6-12 months in advance. Smaller events may require 3-6 months of planning time. However, we occasionally can accommodate projects with shorter timelines, so don't hesitate to contact us regardless of your timeline.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you work with clients remotely?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer virtual design services for clients outside our local area. Using video consultations, digital mood boards, and 3D renderings, we can create beautiful designs remotely. While we prefer in-person meetings for local projects, our virtual process has successfully delivered exceptional results for clients worldwide.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can you work with existing furniture and decor?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We believe in creating spaces that reflect your personality, which often includes incorporating cherished existing pieces. Our expertise includes blending new and existing elements to create cohesive, beautiful spaces that honor your history while embracing fresh design concepts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Stay updated with our latest projects, design tips, and exclusive offers.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col about-col">
+                    <div class="footer-logo">
+                        <h2>Elegance<span>Studio</span></h2>
+                    </div>
+                    <p>Transforming spaces and events with innovative design solutions since 2010. We bring creativity, expertise, and personalized service to every project.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col links-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col services-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#interior-design">Residential Design</a></li>
+                        <li><a href="#interior-design">Commercial Design</a></li>
+                        <li><a href="#event-design">Corporate Events</a></li>
+                        <li><a href="#event-design">Social Events</a></li>
+                        <li><a href="#consultations">Design Consultations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col contact-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Design Avenue, Creative District<br>New York, NY 10001</li>
+                        <li><i class="fas fa-phone-alt"></i> (212) 555-1234</li>
+                        <li><i class="fas fa-envelope"></i> info@elegancestudio.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Elegance Design Studio. All Rights Reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></a>
+
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-logo">ES</div>
+            <div class="loader-progress"><span></span></div>
+        </div>
+    </div>
+
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+</body>
+</html>
