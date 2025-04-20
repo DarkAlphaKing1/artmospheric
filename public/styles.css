@@ -8,14 +8,14 @@
     --dark-accent: #2c2c2c;
     
     /* Text colors */
-    --text-dark: #333333;
-    --text-medium: #555555;
+    --text-dark:rgb(18, 117, 209);
+    --text-medium:rgb(6, 39, 4);
     --text-light: #f9f9f9;
     
     /* Background colors */
     --bg-white: #ffffff;
-    --bg-light: #f9f9f9;
-    --bg-dark: #222222;
+    --bg-light:rgb(173, 164, 78);
+    --bg-dark:rgb(10, 124, 48);
     
     /* Fonts */
     --font-heading: 'Playfair Display', serif;
